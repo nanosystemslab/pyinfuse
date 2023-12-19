@@ -20,7 +20,7 @@ class Chain(serial.Serial):
     logs creation of the Chain.
     """
 
-    def __init__(self, port):
+    def __init__(self, port: str):
         serial.Serial.__init__(self, port=port, stopbits=serial.STOPBITS_TWO, parity=serial.PARITY_NONE, timeout=2)
         self.flushOutput()
         self.flushInput()
