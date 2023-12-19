@@ -288,18 +288,18 @@ def parse_command_line():
 def main():
     cmd_args = parse_command_line()
     setup_logging(cmd_args["verbosity"])
-    chain = Chain(cmd_args["address"][0])
-    chain = Chain(cmd_args["address"][0])
-    p11 = Pump(chain, address=1)
-    p11.setdiameter(cmd_args["diameter"][0])  # mm
-    p11.setflowrate(cmd_args["infusion"][0], cmd_args["infusionunits"][0])
-    p11.settargettime(2)
-    # p11.settargetvolume(1, "ml")
-    p11.infuse()
-
-    # p11.set_syringe_man("hm1")
-
-    chain.close()
+    #    chain = Chain(cmd_args["address"][0])
+    #    chain = Chain(cmd_args["address"][0])
+    #    p11 = Pump(chain, address=1)
+    #    p11.setdiameter(cmd_args["diameter"][0])  # mm
+    #    p11.setflowrate(cmd_args["infusion"][0], cmd_args["infusionunits"][0])
+    #    p11.settargettime(2)
+    #    # p11.settargetvolume(1, "ml")
+    #    p11.infuse()
+    #
+    #    # p11.set_syringe_man("hm1")
+    #
+    #    chain.close()
     return None
 
 
