@@ -62,10 +62,12 @@ class Pump:
             raise
 
         logging.info("%s: created at address %s on %s", self.name, self.address, self.serialcon.port)
+        return None
 
     def write(self, command):
         msg_write = f"{self.address}{command}\r"
         self.serialcon.write(msg_write.encode("utf-8"))
+        return None
 
     def read(self, read_bytes=5):
         response = self.serialcon.read(read_bytes).decode()
@@ -104,6 +106,7 @@ class Pump:
         if "error:" in resp:
             print("Check your units or volume")
             print(resp)
+        return None
 
     def setflowrate(self, flowrate, units):
         """Set flow rate (microlitres per minute).
@@ -128,6 +131,7 @@ class Pump:
         if "error:" in resp:
             print("Check your units or flow rate")
             print(resp)
+        return None
 
     def infuse(self):
         """Start infusing pump."""
@@ -141,6 +145,7 @@ class Pump:
         #    resp = self.serialcon.read(5)
 
         # logging.info('%s: infusing',self.name)
+        return None
 
     def withdraw(self):
         """Start withdrawing pump."""
@@ -158,6 +163,7 @@ class Pump:
             resp = self.read(5)
 
         logging.info("%s: withdrawing", self.name)
+        return None
 
     def stop(self):
         """Stop pump."""
@@ -168,6 +174,7 @@ class Pump:
         #    raise PumpError('%s: unexpected response to stop' % self.name)
         # else:
         #    logging.info('%s: stopped',self.name)
+        return None
 
     def settargetvolume(self, targetvolume, units):
         """Set the target volume to infuse or withdraw (microlitres)."""
@@ -178,6 +185,7 @@ class Pump:
         if "error:" in resp:
             print("Check your units or volume")
             print(resp)
+        return None
 
     def settargettime(self, targettime):
         """Set the target time to infuse or withdraw (sec)."""
@@ -188,6 +196,7 @@ class Pump:
         if "error:" in resp:
             print("Check your time")
             print(resp)
+        return None
 
 
 class PumpError(Exception):
@@ -202,6 +211,7 @@ def setup_logging(verbosity):
     log_fmt = "%(levelname)s - %(module)s - %(funcName)s @%(lineno)d: %(message)s"
     # addl keys: asctime, module, name
     logging.basicConfig(filename=None, format=log_fmt, level=logging.getLevelName(verbosity))
+    return None
 
 
 def parse_command_line():
@@ -290,6 +300,7 @@ def main():
     # p11.set_syringe_man("hm1")
 
     chain.close()
+    return None
 
 
 if __name__ == "__main__":
