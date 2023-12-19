@@ -64,7 +64,7 @@ class Pump:
         logging.info("%s: created at address %s on %s", self.name, self.address, self.serialcon.port)
         return None
 
-    def write(self, command):
+    def write(self, command: str):
         msg_write = f"{self.address}{command}\r"
         self.serialcon.write(msg_write.encode("utf-8"))
         return None
@@ -77,7 +77,7 @@ class Pump:
         else:
             return response
 
-    def setdiameter(self, diameter):
+    def setdiameter(self, diameter: float):
         """Set syringe diameter (millimetres).
 
         Pump 11 syringe diameter range is 0.1-35 mm. Note that the pump
@@ -108,7 +108,7 @@ class Pump:
             print(resp)
         return None
 
-    def setflowrate(self, flowrate, units):
+    def setflowrate(self, flowrate: float, units: str):
         """Set flow rate (microlitres per minute).
 
         Flow rate is converted to a string. Pump 11 requires it to have
@@ -176,7 +176,7 @@ class Pump:
         #    logging.info('%s: stopped',self.name)
         return None
 
-    def settargetvolume(self, targetvolume, units):
+    def settargetvolume(self, targetvolume: float, units: str):
         """Set the target volume to infuse or withdraw (microlitres)."""
 
         msg = f"tvolume {targetvolume} {units}"
@@ -187,7 +187,7 @@ class Pump:
             print(resp)
         return None
 
-    def settargettime(self, targettime):
+    def settargettime(self, targettime: int):
         """Set the target time to infuse or withdraw (sec)."""
         msg = f"ttime {targettime}"
 
@@ -288,18 +288,18 @@ def parse_command_line():
 def main():
     cmd_args = parse_command_line()
     setup_logging(cmd_args["verbosity"])
-    #    chain = Chain(cmd_args["address"][0])
-    #    chain = Chain(cmd_args["address"][0])
-    #    p11 = Pump(chain, address=1)
-    #    p11.setdiameter(cmd_args["diameter"][0])  # mm
-    #    p11.setflowrate(cmd_args["infusion"][0], cmd_args["infusionunits"][0])
-    #    p11.settargettime(2)
-    #    # p11.settargetvolume(1, "ml")
-    #    p11.infuse()
-    #
-    #    # p11.set_syringe_man("hm1")
-    #
-    #    chain.close()
+    chain = Chain(cmd_args["address"][0])
+    chain = Chain(cmd_args["address"][0])
+    p11 = Pump(chain, address=1)
+    p11.setdiameter(cmd_args["diameter"][0])  # mm
+    p11.setflowrate(cmd_args["infusion"][0], cmd_args["infusionunits"][0])
+    p11.settargettime(2)
+    # p11.settargetvolume(1, "ml")
+    p11.infuse()
+
+    # p11.set_syringe_man("hm1")
+
+    chain.close()
     return None
 
 
