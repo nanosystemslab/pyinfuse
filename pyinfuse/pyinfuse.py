@@ -1,6 +1,7 @@
 import argparse
 import logging
 import sys
+from typing import Any, Dict
 
 import serial
 
@@ -22,8 +23,6 @@ class Chain(serial.Serial):
 
     def __init__(self, port: str):
         serial.Serial.__init__(self, port=port, stopbits=serial.STOPBITS_TWO, parity=serial.PARITY_NONE, timeout=2)
-        self.flushOutput()
-        self.flushInput()
         logging.info("Chain created on %s", port)
 
 
@@ -38,7 +37,7 @@ class Pump:
         name: used in logging. Default is Pump 11.
     """
 
-    def __init__(self, chain, address=0, name="Pump 11"):
+    def __init__(self, chain: Chain, address: int = 0, name: str = "Pump 11"):
         self.name = name
         self.serialcon = chain
         self.address = f"{address:02.0f}"
@@ -64,12 +63,12 @@ class Pump:
         logging.info("%s: created at address %s on %s", self.name, self.address, self.serialcon.port)
         return None
 
-    def write(self, command: str):
+    def write(self, command: str) -> None:
         msg_write = f"{self.address}{command}\r"
         self.serialcon.write(msg_write.encode("utf-8"))
         return None
 
-    def read(self, read_bytes=5):
+    def read(self, read_bytes: int = 5) -> str:
         response = self.serialcon.read(read_bytes).decode()
 
         if len(response) == 0:
@@ -77,19 +76,19 @@ class Pump:
         else:
             return response
 
-    def setdiameter(self, diameter: float):
+    def setdiameter(self, diameter: str) -> None:
         """Set syringe diameter (millimetres).
 
         Pump 11 syringe diameter range is 0.1-35 mm. Note that the pump
         ignores precision greater than 2 decimal places. If more d.p.
         are specificed the diameter will be truncated.
         """
-        diameter = float(diameter)
-        if diameter > 35 or diameter < 0.1:
+        check_diameter = float(diameter)
+        if check_diameter > 35 or check_diameter < 0.1:
             raise PumpError(f"{self.name}: diameter {diameter} mm is out of range")
 
         # TODO: Got to be a better way of doing this with string formatting
-        diameter = str(diameter)
+        # diameter = str(diameter)
 
         # Pump only considers 2 d.p. - anymore are ignored
         if len(diameter) > 5:
@@ -108,7 +107,7 @@ class Pump:
             print(resp)
         return None
 
-    def setflowrate(self, flowrate: float, units: str):
+    def setflowrate(self, flowrate: str, units: str) -> None:
         """Set flow rate (microlitres per minute).
 
         Flow rate is converted to a string. Pump 11 requires it to have
@@ -133,7 +132,7 @@ class Pump:
             print(resp)
         return None
 
-    def infuse(self):
+    def infuse(self) -> None:
         """Start infusing pump."""
         self.write("run")
         # resp = self.read(5)
@@ -147,7 +146,7 @@ class Pump:
         # logging.info('%s: infusing',self.name)
         return None
 
-    def withdraw(self):
+    def withdraw(self) -> None:
         """Start withdrawing pump."""
         self.write("REV")
         resp = self.read(5)
@@ -165,7 +164,7 @@ class Pump:
         logging.info("%s: withdrawing", self.name)
         return None
 
-    def stop(self):
+    def stop(self) -> None:
         """Stop pump."""
         self.write("STP")
         # resp = self.read(5)
@@ -176,7 +175,7 @@ class Pump:
         #    logging.info('%s: stopped',self.name)
         return None
 
-    def settargetvolume(self, targetvolume: float, units: str):
+    def settargetvolume(self, targetvolume: str, units: str) -> None:
         """Set the target volume to infuse or withdraw (microlitres)."""
 
         msg = f"tvolume {targetvolume} {units}"
@@ -187,7 +186,7 @@ class Pump:
             print(resp)
         return None
 
-    def settargettime(self, targettime: int):
+    def settargettime(self, targettime: int) -> None:
         """Set the target time to infuse or withdraw (sec)."""
         msg = f"ttime {targettime}"
 
@@ -207,14 +206,14 @@ class PumpError(Exception):
 # Run with -h flag to see help
 
 
-def setup_logging(verbosity):
+def setup_logging(verbosity: str) -> None:
     log_fmt = "%(levelname)s - %(module)s - %(funcName)s @%(lineno)d: %(message)s"
     # addl keys: asctime, module, name
     logging.basicConfig(filename=None, format=log_fmt, level=logging.getLevelName(verbosity))
     return None
 
 
-def parse_command_line():
+def parse_command_line() -> Dict[str, Any]:
     parser = argparse.ArgumentParser(description="Analyse sensor data")
     parser.add_argument("-V", "--version", "--VERSION", action="version", version=f"%(prog)s {__version__}")
     parser.add_argument("-v", "--verbose", action="count", default=0, dest="verbosity", help="verbose output")
@@ -285,7 +284,7 @@ def parse_command_line():
     return ret
 
 
-def main():
+def main() -> str:
     cmd_args = parse_command_line()
     setup_logging(cmd_args["verbosity"])
     chain = Chain(cmd_args["address"][0])
@@ -300,7 +299,8 @@ def main():
     # p11.set_syringe_man("hm1")
 
     chain.close()
-    return None
+    closed = "closed"
+    return closed
 
 
 if __name__ == "__main__":
