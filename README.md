@@ -2,7 +2,6 @@
 
 [![Release](https://img.shields.io/github/v/release/nanosystemslab/pyinfuse)](https://img.shields.io/github/v/release/nanosystemslab/pyinfuse)
 [![Build status](https://img.shields.io/github/actions/workflow/status/nanosystemslab/pyinfuse/main.yml?branch=main)](https://github.com/nanosystemslab/pyinfuse/actions/workflows/main.yml?query=branch%3Amain)
-[![codecov](https://codecov.io/gh/nanosystemslab/pyinfuse/branch/main/graph/badge.svg)](https://codecov.io/gh/nanosystemslab/pyinfuse)
 [![Commit activity](https://img.shields.io/github/commit-activity/m/nanosystemslab/pyinfuse)](https://img.shields.io/github/commit-activity/m/nanosystemslab/pyinfuse)
 [![License](https://img.shields.io/github/license/nanosystemslab/pyinfuse)](https://img.shields.io/github/license/nanosystemslab/pyinfuse)
 
