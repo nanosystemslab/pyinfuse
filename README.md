@@ -48,14 +48,16 @@ For more details, see [here](https://fpgmaas.github.io/cookiecutter-poetry/featu
 If you use this project in your research, please cite it using the following BibTeX entry:
 
 ```bibtex
-@misc{pyinfuse,
+@software{pyinfuse,
   author       = {Matthew Nakamura},
-  title        = {pyinfuse: Library to control a Harvard Apparatus Pump 11 Elite syringe pump},
-  year         = {2024},
-  howpublished = {\url{https://github.com/nanosystemslab/pyinfuse}},
-  note         = {DOI: \href{https://zenodo.org/records/10602723}, Accessed: Month Day, Year}
+  title        = {pyinfuse: Library to control Harvard Apparatus Pump 11 Elite syringe pumps},
+  month        = feb,
+  year         = 2024,
+  publisher    = {Zenodo},
+  version      = {v0.0.1},
+  doi          = {10.5281/zenodo.10602723},
+  url          = {https://doi.org/10.5281/zenodo.10602723}
 }
-
 ---
 
 Repository initiated with [fpgmaas/cookiecutter-poetry](https://github.com/fpgmaas/cookiecutter-poetry).
