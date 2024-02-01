@@ -8,7 +8,6 @@
 Library to control a Harvard Apparatus Pump 11 Elite syringe pump
 
 - **Github repository**: <https://github.com/nanosystemslab/pyinfuse/>
-- **Documentation** <https://nanosystemslab.github.io/pyinfuse/>
 
 ## Getting started with your project
 
@@ -43,6 +42,19 @@ To enable the code coverage reports, see [here](https://fpgmaas.github.io/cookie
 - Create a new tag in the form `*.*.*`.
 
 For more details, see [here](https://fpgmaas.github.io/cookiecutter-poetry/features/cicd/#how-to-trigger-a-release).
+
+## Citation
+
+If you use this project in your research, please cite it using the following BibTeX entry:
+
+```bibtex
+@misc{pyinfuse,
+  author       = {Matthew Nakamura},
+  title        = {pyinfuse: Library to control a Harvard Apparatus Pump 11 Elite syringe pump},
+  year         = {2024},
+  howpublished = {\url{https://github.com/nanosystemslab/pyinfuse}},
+  note         = {DOI: \href{https://zenodo.org/records/10602723}, Accessed: Month Day, Year}
+}
 
 ---
 
