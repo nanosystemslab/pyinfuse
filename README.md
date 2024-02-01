@@ -58,6 +58,7 @@ If you use this project in your research, please cite it using the following Bib
   doi          = {10.5281/zenodo.10602723},
   url          = {https://doi.org/10.5281/zenodo.10602723}
 }
+
 ---
 
 Repository initiated with [fpgmaas/cookiecutter-poetry](https://github.com/fpgmaas/cookiecutter-poetry).
