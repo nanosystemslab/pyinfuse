@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+title: pyinfuse: Library to control Harvard Apparatus Pump 11 Elite syringe pumps
+authors:
+  - name: Matthew Nakamura
+    orcid: https://orcid.org/0009-0008-6173-2658
+  - name: Josh Renzo Claudio
+    email: jrc808@hawaii.edu 
+version: 0.0.1
+doi: 10.5281/zenodo.10602723
+date-released: 2023-01-31
+license: MIT
