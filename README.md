@@ -4,6 +4,8 @@
 [![Build status](https://img.shields.io/github/actions/workflow/status/nanosystemslab/pyinfuse/main.yml?branch=main)](https://github.com/nanosystemslab/pyinfuse/actions/workflows/main.yml?query=branch%3Amain)
 [![Commit activity](https://img.shields.io/github/commit-activity/m/nanosystemslab/pyinfuse)](https://img.shields.io/github/commit-activity/m/nanosystemslab/pyinfuse)
 [![License](https://img.shields.io/github/license/nanosystemslab/pyinfuse)](https://img.shields.io/github/license/nanosystemslab/pyinfuse)
+[![DOI](https://zenodo.org/badge/726146441.svg)](https://zenodo.org/doi/10.5281/zenodo.10602722)
+
 
 Library to control a Harvard Apparatus Pump 11 Elite syringe pump
 
