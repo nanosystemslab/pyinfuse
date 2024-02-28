@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: pyinfuse: Library to control Harvard Apparatus Pump 11 Elite syringe pumps
+title: "pyinfuse: Library to control Harvard Apparatus Pump 11 Elite syringe pumps"
 authors:
   - name: Matthew Nakamura
     orcid: https://orcid.org/0009-0008-6173-2658
