@@ -51,8 +51,8 @@ If you use this project in your research, please cite it using the following Bib
 
 ```bibtex
 @software{pyinfuse,
-  author       = {Nakamura, Matthew},
-  title        = {pyinfuse: Library to control Harvard Apparatus Pump 11 Elite syringe pumps},
+  author       = {Nakamura, Matthew and Renzo Claudio, Josh},
+  title        = {{nanosystemslab/pyinfuse: Initial Release of Library}},
   month        = feb,
   year         = 2024,
   publisher    = {Zenodo},
