@@ -1,9 +1,9 @@
-# pyinfuse
+# PyInfuse
 
-[![Release](https://img.shields.io/github/v/release/nanosystemslab/pyinfuse)](https://img.shields.io/github/v/release/nanosystemslab/pyinfuse)
-[![Build status](https://img.shields.io/github/actions/workflow/status/nanosystemslab/pyinfuse/main.yml?branch=main)](https://github.com/nanosystemslab/pyinfuse/actions/workflows/main.yml?query=branch%3Amain)
-[![Commit activity](https://img.shields.io/github/commit-activity/m/nanosystemslab/pyinfuse)](https://img.shields.io/github/commit-activity/m/nanosystemslab/pyinfuse)
-[![License](https://img.shields.io/github/license/nanosystemslab/pyinfuse)](https://img.shields.io/github/license/nanosystemslab/pyinfuse)
+[![Release](https://img.shields.io/github/v/release/nanosystemslab/PyInfuse)](https://img.shields.io/github/v/release/nanosystemslab/PyInfuse)
+[![Build status](https://img.shields.io/github/actions/workflow/status/nanosystemslab/PyInfuse/main.yml?branch=main)](https://github.com/nanosystemslab/PyInfuse/actions/workflows/main.yml?query=branch%3Amain)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/nanosystemslab/PyInfuse)](https://img.shields.io/github/commit-activity/m/nanosystemslab/PyInfuse)
+[![License](https://img.shields.io/github/license/nanosystemslab/PyInfuse)](https://img.shields.io/github/license/nanosystemslab/PyInfuse)
 [![DOI](https://zenodo.org/badge/726146441.svg)](https://zenodo.org/doi/10.5281/zenodo.10602722)
 
 ### Standard Infuse/Withdraw Pump 11 Elite Programmable Syringe Pumps
@@ -21,8 +21,8 @@ For researchers seeking a reliable, accurate, and user-friendly infusion solutio
 
 For more information visit [Harvard Apparatus](https://www.harvardapparatus.com/standard-infuse-withdraw-pump-11-elite-programmable-syringe-pumps.html).
 
-- **github repository**: <https://github.com/nanosystemslab/pyinfuse/>
-- **Documentation** <https://nanosystemslab.github.io/pyinfuse/>
+- **github repository**: <https://github.com/nanosystemslab/PyInfuse/>
+- **Documentation** <https://nanosystemslab.github.io/PyInfuse/>
 
 ## Citation
 
@@ -31,7 +31,7 @@ If you use this project in your research, please cite it using the following Bib
 ```bibtex
 @software{pyinfuse,
   author       = {Nakamura, Matthew and Renzo Claudio, Josh},
-  title        = {{nanosystemslab/pyinfuse: Initial Release of Library}},
+  title        = {{nanosystemslab/PyInfuse: Initial Release of Library}},
   month        = feb,
   year         = 2024,
   publisher    = {Zenodo},
