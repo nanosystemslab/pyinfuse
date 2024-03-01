@@ -86,4 +86,3 @@ Conclusion
 ==========
 
 PyInfuse offers an efficient way to control syringe pumps through serial communication. By abstracting the low-level details, it enables researchers and developers to focus more on their experiments and less on the intricacies of hardware communication.
-

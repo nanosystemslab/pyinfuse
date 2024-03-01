@@ -1,132 +1,353 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="writer-html5" lang="en" data-content_root="./">
-<head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PyInfuse Library &mdash; PyInfuse v0.0.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PyInfuse Library &mdash; PyInfuse v0.0.1 documentation</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="_static/pygments.css?v=80d5e7a1"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="_static/css/theme.css?v=19f00094"
+    />
 
-  
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="_static/jquery.js?v=5d32c60e"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=2fea6348"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <!--[if lt IE 9]>
+      <script src="_static/js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <script src="_static/jquery.js?v=5d32c60e"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="_static/documentation_options.js?v=2fea6348"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Welcome to PyInfuse’s documentation!" href="index.html" /> 
-</head>
+    <link
+      rel="prev"
+      title="Welcome to PyInfuse’s documentation!"
+      href="index.html"
+    />
+  </head>
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-
-          
-          
-          <a href="index.html" class="icon icon-home">
-            PyInfuse
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">PyInfuse Library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#quick-start">Quick Start</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#api-reference">API Reference</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#chain">Chain</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#pyinfuse.Chain"><code class="docutils literal notranslate"><span class="pre">Chain</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#pump">Pump</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#pyinfuse.Pump"><code class="docutils literal notranslate"><span class="pre">Pump</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#exceptions">Exceptions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#pyinfuse.PumpError"><code class="docutils literal notranslate"><span class="pre">PumpError</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
-</ul>
-</li>
-</ul>
-
+  <body class="wy-body-for-nav">
+    <div class="wy-grid-for-nav">
+      <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+          <div class="wy-side-nav-search">
+            <a href="index.html" class="icon icon-home"> PyInfuse </a>
+            <div role="search">
+              <form
+                id="rtd-search-form"
+                class="wy-form"
+                action="search.html"
+                method="get"
+              >
+                <input
+                  type="text"
+                  name="q"
+                  placeholder="Search docs"
+                  aria-label="Search docs"
+                />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </div>
+          </div>
+          <div
+            class="wy-menu wy-menu-vertical"
+            data-spy="affix"
+            role="navigation"
+            aria-label="Navigation menu"
+          >
+            <p class="caption" role="heading">
+              <span class="caption-text">Contents:</span>
+            </p>
+            <ul class="current">
+              <li class="toctree-l1 current">
+                <a class="current reference internal" href="#"
+                  >PyInfuse Library</a
+                >
+                <ul>
+                  <li class="toctree-l2">
+                    <a class="reference internal" href="#introduction"
+                      >Introduction</a
+                    >
+                  </li>
+                  <li class="toctree-l2">
+                    <a class="reference internal" href="#installation"
+                      >Installation</a
+                    >
+                  </li>
+                  <li class="toctree-l2">
+                    <a class="reference internal" href="#quick-start"
+                      >Quick Start</a
+                    >
+                  </li>
+                  <li class="toctree-l2">
+                    <a class="reference internal" href="#api-reference"
+                      >API Reference</a
+                    >
+                    <ul>
+                      <li class="toctree-l3">
+                        <a class="reference internal" href="#chain">Chain</a>
+                        <ul>
+                          <li class="toctree-l4">
+                            <a class="reference internal" href="#pyinfuse.Chain"
+                              ><code class="docutils literal notranslate"
+                                ><span class="pre">Chain</span></code
+                              ></a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="toctree-l3">
+                        <a class="reference internal" href="#pump">Pump</a>
+                        <ul>
+                          <li class="toctree-l4">
+                            <a class="reference internal" href="#pyinfuse.Pump"
+                              ><code class="docutils literal notranslate"
+                                ><span class="pre">Pump</span></code
+                              ></a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="toctree-l3">
+                        <a class="reference internal" href="#exceptions"
+                          >Exceptions</a
+                        >
+                        <ul>
+                          <li class="toctree-l4">
+                            <a
+                              class="reference internal"
+                              href="#pyinfuse.PumpError"
+                              ><code class="docutils literal notranslate"
+                                ><span class="pre">PumpError</span></code
+                              ></a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="toctree-l2">
+                    <a class="reference internal" href="#examples">Examples</a>
+                  </li>
+                  <li class="toctree-l2">
+                    <a class="reference internal" href="#conclusion"
+                      >Conclusion</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">PyInfuse</a>
       </nav>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">PyInfuse Library</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="_sources/infuse.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
-  <section id="pyinfuse-library">
-<h1>PyInfuse Library<a class="headerlink" href="#pyinfuse-library" title="Link to this heading"></a></h1>
-<nav class="contents local" id="contents">
-<ul class="simple">
-<li><p><a class="reference internal" href="#introduction" id="id1">Introduction</a></p></li>
-<li><p><a class="reference internal" href="#installation" id="id2">Installation</a></p></li>
-<li><p><a class="reference internal" href="#quick-start" id="id3">Quick Start</a></p></li>
-<li><p><a class="reference internal" href="#api-reference" id="id4">API Reference</a></p>
-<ul>
-<li><p><a class="reference internal" href="#chain" id="id5">Chain</a></p></li>
-<li><p><a class="reference internal" href="#pump" id="id6">Pump</a></p></li>
-<li><p><a class="reference internal" href="#exceptions" id="id7">Exceptions</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#examples" id="id8">Examples</a></p></li>
-<li><p><a class="reference internal" href="#conclusion" id="id9">Conclusion</a></p></li>
-</ul>
-</nav>
-<section id="introduction">
-<h2><a class="toc-backref" href="#id1" role="doc-backlink">Introduction</a><a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
-<p>PyInfuse provides a Python interface for controlling syringe pumps via a serial port connection. It simplifies the process of managing pumps daisy-chained together by offering a high-level API for tasks such as setting flow rates, syringe diameters, and controlling the infusion or withdrawal of fluids.</p>
-</section>
-<section id="installation">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">Installation</a><a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
-<p>To install PyInfuse, you can use pip:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>pyinfuse
-</pre></div>
-</div>
-</section>
-<section id="quick-start">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Quick Start</a><a class="headerlink" href="#quick-start" title="Link to this heading"></a></h2>
-<p>This section walks you through the basic steps of setting up a pump chain, configuring a pump, and starting an infusion.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyinfuse</span> <span class="kn">import</span> <span class="n">Chain</span><span class="p">,</span> <span class="n">Pump</span>
+      <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+        <nav class="wy-nav-top" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PyInfuse</a>
+        </nav>
+
+        <div class="wy-nav-content">
+          <div class="rst-content">
+            <div role="navigation" aria-label="Page navigation">
+              <ul class="wy-breadcrumbs">
+                <li>
+                  <a
+                    href="index.html"
+                    class="icon icon-home"
+                    aria-label="Home"
+                  ></a>
+                </li>
+                <li class="breadcrumb-item active">PyInfuse Library</li>
+                <li class="wy-breadcrumbs-aside">
+                  <a href="_sources/infuse.rst.txt" rel="nofollow">
+                    View page source</a
+                  >
+                </li>
+              </ul>
+              <hr />
+            </div>
+            <div
+              role="main"
+              class="document"
+              itemscope="itemscope"
+              itemtype="http://schema.org/Article"
+            >
+              <div itemprop="articleBody">
+                <section id="pyinfuse-library">
+                  <h1>
+                    PyInfuse Library<a
+                      class="headerlink"
+                      href="#pyinfuse-library"
+                      title="Link to this heading"
+                      ></a
+                    >
+                  </h1>
+                  <nav class="contents local" id="contents">
+                    <ul class="simple">
+                      <li>
+                        <p>
+                          <a
+                            class="reference internal"
+                            href="#introduction"
+                            id="id1"
+                            >Introduction</a
+                          >
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <a
+                            class="reference internal"
+                            href="#installation"
+                            id="id2"
+                            >Installation</a
+                          >
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <a
+                            class="reference internal"
+                            href="#quick-start"
+                            id="id3"
+                            >Quick Start</a
+                          >
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <a
+                            class="reference internal"
+                            href="#api-reference"
+                            id="id4"
+                            >API Reference</a
+                          >
+                        </p>
+                        <ul>
+                          <li>
+                            <p>
+                              <a
+                                class="reference internal"
+                                href="#chain"
+                                id="id5"
+                                >Chain</a
+                              >
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <a
+                                class="reference internal"
+                                href="#pump"
+                                id="id6"
+                                >Pump</a
+                              >
+                            </p>
+                          </li>
+                          <li>
+                            <p>
+                              <a
+                                class="reference internal"
+                                href="#exceptions"
+                                id="id7"
+                                >Exceptions</a
+                              >
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p>
+                          <a
+                            class="reference internal"
+                            href="#examples"
+                            id="id8"
+                            >Examples</a
+                          >
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <a
+                            class="reference internal"
+                            href="#conclusion"
+                            id="id9"
+                            >Conclusion</a
+                          >
+                        </p>
+                      </li>
+                    </ul>
+                  </nav>
+                  <section id="introduction">
+                    <h2>
+                      <a class="toc-backref" href="#id1" role="doc-backlink"
+                        >Introduction</a
+                      ><a
+                        class="headerlink"
+                        href="#introduction"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <p>
+                      PyInfuse provides a Python interface for controlling
+                      syringe pumps via a serial port connection. It simplifies
+                      the process of managing pumps daisy-chained together by
+                      offering a high-level API for tasks such as setting flow
+                      rates, syringe diameters, and controlling the infusion or
+                      withdrawal of fluids.
+                    </p>
+                  </section>
+                  <section id="installation">
+                    <h2>
+                      <a class="toc-backref" href="#id2" role="doc-backlink"
+                        >Installation</a
+                      ><a
+                        class="headerlink"
+                        href="#installation"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <p>To install PyInfuse, you can use pip:</p>
+                    <div class="highlight-bash notranslate">
+                      <div class="highlight">
+                        <pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>pyinfuse
+</pre>
+                      </div>
+                    </div>
+                  </section>
+                  <section id="quick-start">
+                    <h2>
+                      <a class="toc-backref" href="#id3" role="doc-backlink"
+                        >Quick Start</a
+                      ><a
+                        class="headerlink"
+                        href="#quick-start"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <p>
+                      This section walks you through the basic steps of setting
+                      up a pump chain, configuring a pump, and starting an
+                      infusion.
+                    </p>
+                    <div class="highlight-python notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="kn">from</span> <span class="nn">pyinfuse</span> <span class="kn">import</span> <span class="n">Chain</span><span class="p">,</span> <span class="n">Pump</span>
 
 <span class="c1"># Initialize the chain on a specific serial port</span>
 <span class="n">chain</span> <span class="o">=</span> <span class="n">Chain</span><span class="p">(</span><span class="s1">&#39;/dev/ttyUSB0&#39;</span><span class="p">)</span>
@@ -140,106 +361,461 @@
 
 <span class="c1"># Start infusing</span>
 <span class="n">pump</span><span class="o">.</span><span class="n">infuse</span><span class="p">()</span>
-</pre></div>
-</div>
-</section>
-<section id="api-reference">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink">API Reference</a><a class="headerlink" href="#api-reference" title="Link to this heading"></a></h2>
-<section id="chain">
-<h3><a class="toc-backref" href="#id5" role="doc-backlink">Chain</a><a class="headerlink" href="#chain" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="pyinfuse.Chain">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyinfuse.</span></span><span class="sig-name descname"><span class="pre">Chain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyinfuse.Chain" title="Link to this definition"></a></dt>
-<dd><p>Create Chain object.</p>
-<p>Harvard syringe pumps are daisy chained together in a ‘pump chain’
-off a single serial port. A pump address is set on each pump. You
-must first create a chain to which you then add Pump objects.</p>
-<p>Chain is a subclass of serial.Serial. Chain creates a serial.Serial
-instance with the required parameters, flushes input and output
-buffers (found during testing that this fixes a lot of problems) and
-logs creation of the Chain.</p>
-</dd></dl>
+</pre>
+                      </div>
+                    </div>
+                  </section>
+                  <section id="api-reference">
+                    <h2>
+                      <a class="toc-backref" href="#id4" role="doc-backlink"
+                        >API Reference</a
+                      ><a
+                        class="headerlink"
+                        href="#api-reference"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <section id="chain">
+                      <h3>
+                        <a class="toc-backref" href="#id5" role="doc-backlink"
+                          >Chain</a
+                        ><a
+                          class="headerlink"
+                          href="#chain"
+                          title="Link to this heading"
+                          ></a
+                        >
+                      </h3>
+                      <dl class="py class">
+                        <dt class="sig sig-object py" id="pyinfuse.Chain">
+                          <em class="property"
+                            ><span class="pre">class</span
+                            ><span class="w"> </span></em
+                          ><span class="sig-prename descclassname"
+                            ><span class="pre">pyinfuse.</span></span
+                          ><span class="sig-name descname"
+                            ><span class="pre">Chain</span></span
+                          ><span class="sig-paren">(</span
+                          ><em class="sig-param"
+                            ><span class="n"><span class="pre">port</span></span
+                            ><span class="p"><span class="pre">:</span></span
+                            ><span class="w"> </span
+                            ><span class="n"
+                              ><span class="pre">str</span></span
+                            ></em
+                          ><span class="sig-paren">)</span
+                          ><a
+                            class="headerlink"
+                            href="#pyinfuse.Chain"
+                            title="Link to this definition"
+                            ></a
+                          >
+                        </dt>
+                        <dd>
+                          <p>Create Chain object.</p>
+                          <p>
+                            Harvard syringe pumps are daisy chained together in
+                            a ‘pump chain’ off a single serial port. A pump
+                            address is set on each pump. You must first create a
+                            chain to which you then add Pump objects.
+                          </p>
+                          <p>
+                            Chain is a subclass of serial.Serial. Chain creates
+                            a serial.Serial instance with the required
+                            parameters, flushes input and output buffers (found
+                            during testing that this fixes a lot of problems)
+                            and logs creation of the Chain.
+                          </p>
+                        </dd>
+                      </dl>
+                    </section>
+                    <section id="pump">
+                      <h3>
+                        <a class="toc-backref" href="#id6" role="doc-backlink"
+                          >Pump</a
+                        ><a
+                          class="headerlink"
+                          href="#pump"
+                          title="Link to this heading"
+                          ></a
+                        >
+                      </h3>
+                      <dl class="py class">
+                        <dt class="sig sig-object py" id="pyinfuse.Pump">
+                          <em class="property"
+                            ><span class="pre">class</span
+                            ><span class="w"> </span></em
+                          ><span class="sig-prename descclassname"
+                            ><span class="pre">pyinfuse.</span></span
+                          ><span class="sig-name descname"
+                            ><span class="pre">Pump</span></span
+                          ><span class="sig-paren">(</span
+                          ><em class="sig-param"
+                            ><span class="n"
+                              ><span class="pre">chain</span></span
+                            ><span class="p"><span class="pre">:</span></span
+                            ><span class="w"> </span
+                            ><span class="n"
+                              ><a
+                                class="reference internal"
+                                href="#pyinfuse.Chain"
+                                title="pyinfuse.Chain"
+                                ><span class="pre">Chain</span></a
+                              ></span
+                            ></em
+                          >,
+                          <em class="sig-param"
+                            ><span class="n"
+                              ><span class="pre">address</span></span
+                            ><span class="p"><span class="pre">:</span></span
+                            ><span class="w"> </span
+                            ><span class="n"><span class="pre">int</span></span
+                            ><span class="w"> </span
+                            ><span class="o"><span class="pre">=</span></span
+                            ><span class="w"> </span
+                            ><span class="default_value"
+                              ><span class="pre">0</span></span
+                            ></em
+                          >,
+                          <em class="sig-param"
+                            ><span class="n"><span class="pre">name</span></span
+                            ><span class="p"><span class="pre">:</span></span
+                            ><span class="w"> </span
+                            ><span class="n"><span class="pre">str</span></span
+                            ><span class="w"> </span
+                            ><span class="o"><span class="pre">=</span></span
+                            ><span class="w"> </span
+                            ><span class="default_value"
+                              ><span class="pre">'Pump</span>
+                              <span class="pre">11'</span></span
+                            ></em
+                          ><span class="sig-paren">)</span
+                          ><a
+                            class="headerlink"
+                            href="#pyinfuse.Pump"
+                            title="Link to this definition"
+                            ></a
+                          >
+                        </dt>
+                        <dd>
+                          <p>Create Pump object for Harvard Pump 11.</p>
+                          <dl class="simple">
+                            <dt>Argument:</dt>
+                            <dd><p>Chain: pump chain</p></dd>
+                            <dt>Optional arguments:</dt>
+                            <dd>
+                              <p>
+                                address: pump address. Default is 0. name: used
+                                in logging. Default is Pump 11.
+                              </p>
+                            </dd>
+                          </dl>
+                          <dl class="py method">
+                            <dt
+                              class="sig sig-object py"
+                              id="pyinfuse.Pump.infuse"
+                            >
+                              <span class="sig-name descname"
+                                ><span class="pre">infuse</span></span
+                              ><span class="sig-paren">(</span
+                              ><span class="sig-paren">)</span>
+                              <span class="sig-return"
+                                ><span class="sig-return-icon">&#x2192;</span>
+                                <span class="sig-return-typehint"
+                                  ><span class="pre">None</span></span
+                                ></span
+                              ><a
+                                class="headerlink"
+                                href="#pyinfuse.Pump.infuse"
+                                title="Link to this definition"
+                                ></a
+                              >
+                            </dt>
+                            <dd><p>Start infusing pump.</p></dd>
+                          </dl>
 
-</section>
-<section id="pump">
-<h3><a class="toc-backref" href="#id6" role="doc-backlink">Pump</a><a class="headerlink" href="#pump" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="pyinfuse.Pump">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyinfuse.</span></span><span class="sig-name descname"><span class="pre">Pump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyinfuse.Chain" title="pyinfuse.Chain"><span class="pre">Chain</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">address</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Pump</span> <span class="pre">11'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyinfuse.Pump" title="Link to this definition"></a></dt>
-<dd><p>Create Pump object for Harvard Pump 11.</p>
-<dl class="simple">
-<dt>Argument:</dt><dd><p>Chain: pump chain</p>
-</dd>
-<dt>Optional arguments:</dt><dd><p>address: pump address. Default is 0.
-name: used in logging. Default is Pump 11.</p>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="pyinfuse.Pump.infuse">
-<span class="sig-name descname"><span class="pre">infuse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyinfuse.Pump.infuse" title="Link to this definition"></a></dt>
-<dd><p>Start infusing pump.</p>
-</dd></dl>
+                          <dl class="py method">
+                            <dt
+                              class="sig sig-object py"
+                              id="pyinfuse.Pump.setdiameter"
+                            >
+                              <span class="sig-name descname"
+                                ><span class="pre">setdiameter</span></span
+                              ><span class="sig-paren">(</span
+                              ><em class="sig-param"
+                                ><span class="n"
+                                  ><span class="pre">diameter</span></span
+                                ><span class="p"
+                                  ><span class="pre">:</span></span
+                                ><span class="w"> </span
+                                ><span class="n"
+                                  ><span class="pre">str</span></span
+                                ></em
+                              ><span class="sig-paren">)</span>
+                              <span class="sig-return"
+                                ><span class="sig-return-icon">&#x2192;</span>
+                                <span class="sig-return-typehint"
+                                  ><span class="pre">None</span></span
+                                ></span
+                              ><a
+                                class="headerlink"
+                                href="#pyinfuse.Pump.setdiameter"
+                                title="Link to this definition"
+                                ></a
+                              >
+                            </dt>
+                            <dd>
+                              <p>Set syringe diameter (millimetres).</p>
+                              <p>
+                                Pump 11 syringe diameter range is 0.1-35 mm.
+                                Note that the pump ignores precision greater
+                                than 2 decimal places. If more d.p. are
+                                specificed the diameter will be truncated.
+                              </p>
+                            </dd>
+                          </dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="pyinfuse.Pump.setdiameter">
-<span class="sig-name descname"><span class="pre">setdiameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">diameter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyinfuse.Pump.setdiameter" title="Link to this definition"></a></dt>
-<dd><p>Set syringe diameter (millimetres).</p>
-<p>Pump 11 syringe diameter range is 0.1-35 mm. Note that the pump
-ignores precision greater than 2 decimal places. If more d.p.
-are specificed the diameter will be truncated.</p>
-</dd></dl>
+                          <dl class="py method">
+                            <dt
+                              class="sig sig-object py"
+                              id="pyinfuse.Pump.setflowrate"
+                            >
+                              <span class="sig-name descname"
+                                ><span class="pre">setflowrate</span></span
+                              ><span class="sig-paren">(</span
+                              ><em class="sig-param"
+                                ><span class="n"
+                                  ><span class="pre">flowrate</span></span
+                                ><span class="p"
+                                  ><span class="pre">:</span></span
+                                ><span class="w"> </span
+                                ><span class="n"
+                                  ><span class="pre">str</span></span
+                                ></em
+                              >,
+                              <em class="sig-param"
+                                ><span class="n"
+                                  ><span class="pre">units</span></span
+                                ><span class="p"
+                                  ><span class="pre">:</span></span
+                                ><span class="w"> </span
+                                ><span class="n"
+                                  ><span class="pre">str</span></span
+                                ></em
+                              ><span class="sig-paren">)</span>
+                              <span class="sig-return"
+                                ><span class="sig-return-icon">&#x2192;</span>
+                                <span class="sig-return-typehint"
+                                  ><span class="pre">None</span></span
+                                ></span
+                              ><a
+                                class="headerlink"
+                                href="#pyinfuse.Pump.setflowrate"
+                                title="Link to this definition"
+                                ></a
+                              >
+                            </dt>
+                            <dd>
+                              <p>Set flow rate (microlitres per minute).</p>
+                              <p>
+                                Flow rate is converted to a string. Pump 11
+                                requires it to have a maximum field width of 5,
+                                e.g. “XXXX.” or “X.XXX”. Greater precision will
+                                be truncated.
+                              </p>
+                              <p>
+                                The pump will tell you if the specified flow
+                                rate is out of range. This depends on the
+                                syringe diameter. See Pump 11 manual.
+                              </p>
+                            </dd>
+                          </dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="pyinfuse.Pump.setflowrate">
-<span class="sig-name descname"><span class="pre">setflowrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flowrate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyinfuse.Pump.setflowrate" title="Link to this definition"></a></dt>
-<dd><p>Set flow rate (microlitres per minute).</p>
-<p>Flow rate is converted to a string. Pump 11 requires it to have
-a maximum field width of 5, e.g. “XXXX.” or “X.XXX”. Greater
-precision will be truncated.</p>
-<p>The pump will tell you if the specified flow rate is out of
-range. This depends on the syringe diameter. See Pump 11 manual.</p>
-</dd></dl>
+                          <dl class="py method">
+                            <dt
+                              class="sig sig-object py"
+                              id="pyinfuse.Pump.settargettime"
+                            >
+                              <span class="sig-name descname"
+                                ><span class="pre">settargettime</span></span
+                              ><span class="sig-paren">(</span
+                              ><em class="sig-param"
+                                ><span class="n"
+                                  ><span class="pre">targettime</span></span
+                                ><span class="p"
+                                  ><span class="pre">:</span></span
+                                ><span class="w"> </span
+                                ><span class="n"
+                                  ><span class="pre">int</span></span
+                                ></em
+                              ><span class="sig-paren">)</span>
+                              <span class="sig-return"
+                                ><span class="sig-return-icon">&#x2192;</span>
+                                <span class="sig-return-typehint"
+                                  ><span class="pre">None</span></span
+                                ></span
+                              ><a
+                                class="headerlink"
+                                href="#pyinfuse.Pump.settargettime"
+                                title="Link to this definition"
+                                ></a
+                              >
+                            </dt>
+                            <dd>
+                              <p>
+                                Set the target time to infuse or withdraw (sec).
+                              </p>
+                            </dd>
+                          </dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="pyinfuse.Pump.settargettime">
-<span class="sig-name descname"><span class="pre">settargettime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targettime</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyinfuse.Pump.settargettime" title="Link to this definition"></a></dt>
-<dd><p>Set the target time to infuse or withdraw (sec).</p>
-</dd></dl>
+                          <dl class="py method">
+                            <dt
+                              class="sig sig-object py"
+                              id="pyinfuse.Pump.settargetvolume"
+                            >
+                              <span class="sig-name descname"
+                                ><span class="pre">settargetvolume</span></span
+                              ><span class="sig-paren">(</span
+                              ><em class="sig-param"
+                                ><span class="n"
+                                  ><span class="pre">targetvolume</span></span
+                                ><span class="p"
+                                  ><span class="pre">:</span></span
+                                ><span class="w"> </span
+                                ><span class="n"
+                                  ><span class="pre">str</span></span
+                                ></em
+                              >,
+                              <em class="sig-param"
+                                ><span class="n"
+                                  ><span class="pre">units</span></span
+                                ><span class="p"
+                                  ><span class="pre">:</span></span
+                                ><span class="w"> </span
+                                ><span class="n"
+                                  ><span class="pre">str</span></span
+                                ></em
+                              ><span class="sig-paren">)</span>
+                              <span class="sig-return"
+                                ><span class="sig-return-icon">&#x2192;</span>
+                                <span class="sig-return-typehint"
+                                  ><span class="pre">None</span></span
+                                ></span
+                              ><a
+                                class="headerlink"
+                                href="#pyinfuse.Pump.settargetvolume"
+                                title="Link to this definition"
+                                ></a
+                              >
+                            </dt>
+                            <dd>
+                              <p>
+                                Set the target volume to infuse or withdraw
+                                (microlitres).
+                              </p>
+                            </dd>
+                          </dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="pyinfuse.Pump.settargetvolume">
-<span class="sig-name descname"><span class="pre">settargetvolume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targetvolume</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyinfuse.Pump.settargetvolume" title="Link to this definition"></a></dt>
-<dd><p>Set the target volume to infuse or withdraw (microlitres).</p>
-</dd></dl>
+                          <dl class="py method">
+                            <dt
+                              class="sig sig-object py"
+                              id="pyinfuse.Pump.stop"
+                            >
+                              <span class="sig-name descname"
+                                ><span class="pre">stop</span></span
+                              ><span class="sig-paren">(</span
+                              ><span class="sig-paren">)</span>
+                              <span class="sig-return"
+                                ><span class="sig-return-icon">&#x2192;</span>
+                                <span class="sig-return-typehint"
+                                  ><span class="pre">None</span></span
+                                ></span
+                              ><a
+                                class="headerlink"
+                                href="#pyinfuse.Pump.stop"
+                                title="Link to this definition"
+                                ></a
+                              >
+                            </dt>
+                            <dd><p>Stop pump.</p></dd>
+                          </dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="pyinfuse.Pump.stop">
-<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyinfuse.Pump.stop" title="Link to this definition"></a></dt>
-<dd><p>Stop pump.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyinfuse.Pump.withdraw">
-<span class="sig-name descname"><span class="pre">withdraw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyinfuse.Pump.withdraw" title="Link to this definition"></a></dt>
-<dd><p>Start withdrawing pump.</p>
-</dd></dl>
-
-</dd></dl>
-
-</section>
-<section id="exceptions">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">Exceptions</a><a class="headerlink" href="#exceptions" title="Link to this heading"></a></h3>
-<dl class="py exception">
-<dt class="sig sig-object py" id="pyinfuse.PumpError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyinfuse.</span></span><span class="sig-name descname"><span class="pre">PumpError</span></span><a class="headerlink" href="#pyinfuse.PumpError" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-</section>
-</section>
-<section id="examples">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink">Examples</a><a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
-<p>The following example demonstrates how to control multiple pumps in a chain.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">chain</span> <span class="o">=</span> <span class="n">Chain</span><span class="p">(</span><span class="s1">&#39;/dev/ttyUSB0&#39;</span><span class="p">)</span>
+                          <dl class="py method">
+                            <dt
+                              class="sig sig-object py"
+                              id="pyinfuse.Pump.withdraw"
+                            >
+                              <span class="sig-name descname"
+                                ><span class="pre">withdraw</span></span
+                              ><span class="sig-paren">(</span
+                              ><span class="sig-paren">)</span>
+                              <span class="sig-return"
+                                ><span class="sig-return-icon">&#x2192;</span>
+                                <span class="sig-return-typehint"
+                                  ><span class="pre">None</span></span
+                                ></span
+                              ><a
+                                class="headerlink"
+                                href="#pyinfuse.Pump.withdraw"
+                                title="Link to this definition"
+                                ></a
+                              >
+                            </dt>
+                            <dd><p>Start withdrawing pump.</p></dd>
+                          </dl>
+                        </dd>
+                      </dl>
+                    </section>
+                    <section id="exceptions">
+                      <h3>
+                        <a class="toc-backref" href="#id7" role="doc-backlink"
+                          >Exceptions</a
+                        ><a
+                          class="headerlink"
+                          href="#exceptions"
+                          title="Link to this heading"
+                          ></a
+                        >
+                      </h3>
+                      <dl class="py exception">
+                        <dt class="sig sig-object py" id="pyinfuse.PumpError">
+                          <em class="property"
+                            ><span class="pre">exception</span
+                            ><span class="w"> </span></em
+                          ><span class="sig-prename descclassname"
+                            ><span class="pre">pyinfuse.</span></span
+                          ><span class="sig-name descname"
+                            ><span class="pre">PumpError</span></span
+                          ><a
+                            class="headerlink"
+                            href="#pyinfuse.PumpError"
+                            title="Link to this definition"
+                            ></a
+                          >
+                        </dt>
+                        <dd></dd>
+                      </dl>
+                    </section>
+                  </section>
+                  <section id="examples">
+                    <h2>
+                      <a class="toc-backref" href="#id8" role="doc-backlink"
+                        >Examples</a
+                      ><a
+                        class="headerlink"
+                        href="#examples"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <p>
+                      The following example demonstrates how to control multiple
+                      pumps in a chain.
+                    </p>
+                    <div class="highlight-python notranslate">
+                      <div class="highlight">
+                        <pre><span></span><span class="n">chain</span> <span class="o">=</span> <span class="n">Chain</span><span class="p">(</span><span class="s1">&#39;/dev/ttyUSB0&#39;</span><span class="p">)</span>
 <span class="n">pump1</span> <span class="o">=</span> <span class="n">Pump</span><span class="p">(</span><span class="n">chain</span><span class="p">,</span> <span class="n">address</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Pump 1&#39;</span><span class="p">)</span>
 <span class="n">pump2</span> <span class="o">=</span> <span class="n">Pump</span><span class="p">(</span><span class="n">chain</span><span class="p">,</span> <span class="n">address</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Pump 2&#39;</span><span class="p">)</span>
 
@@ -252,43 +828,73 @@ range. This depends on the syringe diameter. See Pump 11 manual.</p>
 <span class="c1"># Start both pumps</span>
 <span class="n">pump1</span><span class="o">.</span><span class="n">infuse</span><span class="p">()</span>
 <span class="n">pump2</span><span class="o">.</span><span class="n">infuse</span><span class="p">()</span>
-</pre></div>
-</div>
-</section>
-<section id="conclusion">
-<h2><a class="toc-backref" href="#id9" role="doc-backlink">Conclusion</a><a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
-<p>PyInfuse offers an efficient way to control syringe pumps through serial communication. By abstracting the low-level details, it enables researchers and developers to focus more on their experiments and less on the intricacies of hardware communication.</p>
-</section>
-</section>
+</pre>
+                      </div>
+                    </div>
+                  </section>
+                  <section id="conclusion">
+                    <h2>
+                      <a class="toc-backref" href="#id9" role="doc-backlink"
+                        >Conclusion</a
+                      ><a
+                        class="headerlink"
+                        href="#conclusion"
+                        title="Link to this heading"
+                        ></a
+                      >
+                    </h2>
+                    <p>
+                      PyInfuse offers an efficient way to control syringe pumps
+                      through serial communication. By abstracting the low-level
+                      details, it enables researchers and developers to focus
+                      more on their experiments and less on the intricacies of
+                      hardware communication.
+                    </p>
+                  </section>
+                </section>
+              </div>
+            </div>
+            <footer>
+              <div
+                class="rst-footer-buttons"
+                role="navigation"
+                aria-label="Footer"
+              >
+                <a
+                  href="index.html"
+                  class="btn btn-neutral float-left"
+                  title="Welcome to PyInfuse’s documentation!"
+                  accesskey="p"
+                  rel="prev"
+                  ><span
+                    class="fa fa-arrow-circle-left"
+                    aria-hidden="true"
+                  ></span>
+                  Previous</a
+                >
+              </div>
 
+              <hr />
 
-           </div>
+              <div role="contentinfo">
+                <p>&#169; Copyright 2024, Nanosystems Lab.</p>
+              </div>
+
+              Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using
+              a
+              <a href="https://github.com/readthedocs/sphinx_rtd_theme"
+                >theme</a
+              >
+              provided by <a href="https://readthedocs.org">Read the Docs</a>.
+            </footer>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to PyInfuse’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2024, Nanosystems Lab.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
         </div>
-      </div>
-    </section>
-  </div>
-  <script>
+      </section>
+    </div>
+    <script>
       jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
+        SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
-
-</body>
+    </script>
+  </body>
 </html>
