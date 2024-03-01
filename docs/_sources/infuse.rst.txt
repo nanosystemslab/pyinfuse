@@ -1,0 +1,89 @@
+===================
+PyInfuse Library
+===================
+
+.. contents::
+   :local:
+
+Introduction
+============
+
+PyInfuse provides a Python interface for controlling syringe pumps via a serial port connection. It simplifies the process of managing pumps daisy-chained together by offering a high-level API for tasks such as setting flow rates, syringe diameters, and controlling the infusion or withdrawal of fluids.
+
+Installation
+============
+
+To install PyInfuse, you can use pip:
+
+.. code-block:: bash
+
+    pip install pyinfuse
+
+Quick Start
+===========
+
+This section walks you through the basic steps of setting up a pump chain, configuring a pump, and starting an infusion.
+
+.. code-block:: python
+
+    from pyinfuse import Chain, Pump
+
+    # Initialize the chain on a specific serial port
+    chain = Chain('/dev/ttyUSB0')
+
+    # Add a Pump to the chain
+    pump = Pump(chain, address=1, name='Pump 11')
+
+    # Set syringe diameter and flow rate
+    pump.setdiameter('25')
+    pump.setflowrate('5', 'uL/min')
+
+    # Start infusing
+    pump.infuse()
+
+API Reference
+=============
+
+Chain
+-----
+
+.. autoclass:: pyinfuse.Chain
+   :members:
+
+Pump
+----
+
+.. autoclass:: pyinfuse.Pump
+   :members:
+
+Exceptions
+----------
+
+.. autoexception:: pyinfuse.PumpError
+
+Examples
+========
+
+The following example demonstrates how to control multiple pumps in a chain.
+
+.. code-block:: python
+
+    chain = Chain('/dev/ttyUSB0')
+    pump1 = Pump(chain, address=1, name='Pump 1')
+    pump2 = Pump(chain, address=2, name='Pump 2')
+
+    # Configure the pumps
+    pump1.setdiameter('12.5')
+    pump1.setflowrate('100', 'uL/min')
+    pump2.setdiameter('25')
+    pump2.setflowrate('200', 'uL/min')
+
+    # Start both pumps
+    pump1.infuse()
+    pump2.infuse()
+
+Conclusion
+==========
+
+PyInfuse offers an efficient way to control syringe pumps through serial communication. By abstracting the low-level details, it enables researchers and developers to focus more on their experiments and less on the intricacies of hardware communication.
+
