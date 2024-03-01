@@ -7,43 +7,22 @@
 [![DOI](https://zenodo.org/badge/726146441.svg)](https://zenodo.org/doi/10.5281/zenodo.10602722)
 
 
-Library to control a Harvard Apparatus Pump 11 Elite syringe pump
+### Standard Infuse/Withdraw Pump 11 Elite Programmable Syringe Pumps
 
-- **Github repository**: <https://github.com/nanosystemslab/pyinfuse/>
+The **Pump 11 Elite Series** represents the cutting edge in syringe pump technology, offering a comprehensive solution for a wide range of experimental needs. Designed to maintain the legacy of a premier infusion pump, the Elite Series combines user-friendly operation with a high-resolution touch screen, facilitating an intuitive icon-based interface. This allows researchers to effortlessly create, save, and execute both simple and complex infusion methods without needing a computer.
 
-## Getting started with your project
+**Key Features:**
+- **Versatile Syringe Compatibility:** The pumps feature a newly designed mechanism that securely clamps syringes ranging from 0.5 µl to 60 ml for a single syringe setup, and 0.5 µl to 10 ml for dual syringe configurations, ensuring reliable and consistent performance across a wide variety of syringe sizes.
+- **Enhanced Flow Performance:** Offering flow rates from 1.28 picoliters per minute up to 88.28 milliliters per minute, the Pump 11 Elite Series guarantees high accuracy and smooth flow for precise experimental control.
+- **Flexible Configuration Options:** Available in both Infusion Only and Infusion/Withdrawal Programmable Models, with options for single or dual syringe racks to best meet your experimental requirements.
+- **Advanced Connectivity:** Equipped with a USB serial port for direct computer control, RS-485 (or an optional RJ-11) ports for linking multiple pumps, and Digital I/O for remote operation, these pumps are built to integrate seamlessly into your laboratory setup.
 
-First, create a repository on GitHub with the same name as this project, and then run the following commands:
+For researchers seeking a reliable, accurate, and user-friendly infusion solution, the Pump 11 Elite Series offers unmatched capabilities to enhance experimental outcomes.
 
-```bash
-git init -b main
-git add .
-git commit -m "init commit"
-git remote add origin git@github.com:nanosystemslab/pyinfuse.git
-git push -u origin main
-```
+For more information visit [Harvard Apparatus](https://www.harvardapparatus.com/standard-infuse-withdraw-pump-11-elite-programmable-syringe-pumps.html).
 
-Finally, install the environment and the pre-commit hooks with
-
-```bash
-make install
-```
-
-You are now ready to start development on your project!
-The CI/CD pipeline will be triggered when you open a pull request, merge to main, or when you create a new release.
-
-To finalize the set-up for publishing to PyPi or Artifactory, see [here](https://fpgmaas.github.io/cookiecutter-poetry/features/publishing/#set-up-for-pypi).
-For activating the automatic documentation with MkDocs, see [here](https://fpgmaas.github.io/cookiecutter-poetry/features/mkdocs/#enabling-the-documentation-on-github).
-To enable the code coverage reports, see [here](https://fpgmaas.github.io/cookiecutter-poetry/features/codecov/).
-
-## Releasing a new version
-
-- Create an API Token on [Pypi](https://pypi.org/).
-- Add the API Token to your projects secrets with the name `PYPI_TOKEN` by visiting [this page](https://github.com/nanosystemslab/pyinfuse/settings/secrets/actions/new).
-- Create a [new release](https://github.com/nanosystemslab/pyinfuse/releases/new) on Github.
-- Create a new tag in the form `*.*.*`.
-
-For more details, see [here](https://fpgmaas.github.io/cookiecutter-poetry/features/cicd/#how-to-trigger-a-release).
+- **github repository**: <https://github.com/nanosystemslab/pyinfuse/>
+- **Documentation** <https://nanosystemslab.github.io/pyinfuse/>
 
 ## Citation
 
