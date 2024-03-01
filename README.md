@@ -1,9 +1,9 @@
 # PyInfuse
 
-[![Release](https://img.shields.io/github/v/release/nanosystemslab/PyInfuse)](https://img.shields.io/github/v/release/nanosystemslab/PyInfuse)
-[![Build status](https://img.shields.io/github/actions/workflow/status/nanosystemslab/PyInfuse/main.yml?branch=main)](https://github.com/nanosystemslab/PyInfuse/actions/workflows/main.yml?query=branch%3Amain)
-[![Commit activity](https://img.shields.io/github/commit-activity/m/nanosystemslab/PyInfuse)](https://img.shields.io/github/commit-activity/m/nanosystemslab/PyInfuse)
-[![License](https://img.shields.io/github/license/nanosystemslab/PyInfuse)](https://img.shields.io/github/license/nanosystemslab/PyInfuse)
+[![Release](https://img.shields.io/github/v/release/nanosystemslab/pyinfuse)](https://img.shields.io/github/v/release/nanosystemslab/pyinfuse)
+[![Build status](https://img.shields.io/github/actions/workflow/status/nanosystemslab/pyinfuse/main.yml?branch=main)](https://github.com/nanosystemslab/pyinfuse/actions/workflows/main.yml?query=branch%3Amain)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/nanosystemslab/pyinfuse)](https://img.shields.io/github/commit-activity/m/nanosystemslab/pyinfuse)
+[![License](https://img.shields.io/github/license/nanosystemslab/pyInfuse)](https://img.shields.io/github/license/nanosystemslab/pyinfuse)
 [![DOI](https://zenodo.org/badge/726146441.svg)](https://zenodo.org/doi/10.5281/zenodo.10602722)
 
 ### Standard Infuse/Withdraw Pump 11 Elite Programmable Syringe Pumps
@@ -21,8 +21,8 @@ For researchers seeking a reliable, accurate, and user-friendly infusion solutio
 
 For more information visit [Harvard Apparatus](https://www.harvardapparatus.com/standard-infuse-withdraw-pump-11-elite-programmable-syringe-pumps.html).
 
-- **github repository**: <https://github.com/nanosystemslab/PyInfuse/>
-- **Documentation** <https://nanosystemslab.github.io/PyInfuse/>
+- **github repository**: <https://github.com/nanosystemslab/pyinfuse/>
+- **Documentation** <https://nanosystemslab.github.io/pyinfuse/>
 
 ## Citation
 
