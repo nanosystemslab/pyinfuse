@@ -1,0 +1,16 @@
+{
+  "_checkout": "2022.6.3",
+  "_output_dir": "/Users/ethan/Desktop/School/Fall_2024/ENGR_296/nanosystemslab",
+  "_repo_dir": "/Users/ethan/.cookiecutters/cookiecutter-hypermodern-python",
+  "_template": "gh:cjolowicz/cookiecutter-hypermodern-python",
+  "author": "Nanosystems Lab",
+  "copyright_year": "2024",
+  "development_status": "Development Status :: 5 - Production/Stable",
+  "email": "fnslab@hawaii.edu",
+  "friendly_name": "Pyinfuse",
+  "github_user": "nanosystemslab",
+  "license": "MIT",
+  "package_name": "pyinfuse",
+  "project_name": "pyinfuse",
+  "version": "0.0.1"
+}
