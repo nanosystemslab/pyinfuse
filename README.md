@@ -4,6 +4,7 @@
 [![Status](https://img.shields.io/pypi/status/pyinfuse.svg)][status]
 [![Python Version](https://img.shields.io/pypi/pyversions/pyinfuse)][python version]
 [![License](https://img.shields.io/pypi/l/pyinfuse)][license]
+[![DOI](https://zenodo.org/badge/726146441.svg)](https://zenodo.org/doi/10.5281/zenodo.10602722)
 
 [![Read the documentation at https://pyinfuse.readthedocs.io/](https://img.shields.io/readthedocs/pyinfuse/latest.svg?label=Read%20the%20Docs)][read the docs]
 [![Tests](https://github.com/nanosystemslab/pyinfuse/workflows/Tests/badge.svg)][tests]
