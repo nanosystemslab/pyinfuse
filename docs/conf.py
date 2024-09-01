@@ -1,4 +1,5 @@
 """Sphinx configuration."""
+
 project = "Pyinfuse"
 author = "Nanosystems Lab"
 copyright = "2024, Nanosystems Lab"
