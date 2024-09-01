@@ -158,7 +158,6 @@ class Pump:
                 self.write("REV")
             else:
                 raise PumpError("%s: unknown response to withdraw" % self.name)
-                break
             resp = self.read(5)
 
         logging.info("%s: withdrawing", self.name)
