@@ -23,7 +23,17 @@
 
 ## Features
 
-- TODO
+- **Versatile Syringe Compatibility:** The pumps feature a newly designed mechanism that securely clamps syringes ranging from 0.5 µl to 60 ml for a single syringe setup, and 0.5 µl to 10 ml for dual syringe configurations, ensuring reliable and consistent performance across a wide variety of syringe sizes.
+- **Enhanced Flow Performance:** Offering flow rates from 1.28 picoliters per minute up to 88.28 milliliters per minute, the Pump 11 Elite Series guarantees high accuracy and smooth flow for precise experimental control.
+- **Flexible Configuration Options:** Available in both Infusion Only and Infusion/Withdrawal Programmable Models, with options for single or dual syringe racks to best meet your experimental requirements.
+- **Advanced Connectivity:** Equipped with a USB serial port for direct computer control, RS-485 (or an optional RJ-11) ports for linking multiple pumps, and Digital I/O for remote operation, these pumps are built to integrate seamlessly into your laboratory setup.
+
+For researchers seeking a reliable, accurate, and user-friendly infusion solution, the Pump 11 Elite Series offers unmatched capabilities to enhance experimental outcomes.
+
+For more information visit [Harvard Apparatus](https://www.harvardapparatus.com/standard-infuse-withdraw-pump-11-elite-programmable-syringe-pumps.html).
+
+- **github repository**: <https://github.com/nanosystemslab/pyinfuse/>
+- **Documentation** <https://nanosystemslab.github.io/pyinfuse/>
 
 ## Requirements
 
@@ -50,6 +60,21 @@ To learn more, see the [Contributor Guide].
 
 Distributed under the terms of the [MIT license][license],
 _Pyinfuse_ is free and open source software.
+
+If you use this project in your research, please cite it using the following BibTeX entry:
+
+```bibtex
+@software{pyinfuse,
+  author       = {Nakamura, Matthew and Renzo Claudio, Josh},
+  title        = {{nanosystemslab/PyInfuse: Initial Release of Library}},
+  month        = feb,
+  year         = 2024,
+  publisher    = {Zenodo},
+  version      = {v0.0.1},
+  doi          = {10.5281/zenodo.10602723},
+  url          = {https://doi.org/10.5281/zenodo.10602723}
+}
+```
 
 ## Issues
 
