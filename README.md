@@ -21,6 +21,10 @@
 [pre-commit]: https://github.com/pre-commit/pre-commit
 [black]: https://github.com/psf/black
 
+### Standard Infuse/Withdraw Pump 11 Elite Programmable Syringe Pumps
+
+The **Pump 11 Elite Series** represents the cutting edge in syringe pump technology, offering a comprehensive solution for a wide range of experimental needs. Designed to maintain the legacy of a premier infusion pump, the Elite Series combines user-friendly operation with a high-resolution touch screen, facilitating an intuitive icon-based interface. This allows researchers to effortlessly create, save, and execute both simple and complex infusion methods without needing a computer.
+
 ## Features
 
 - **Versatile Syringe Compatibility:** The pumps feature a newly designed mechanism that securely clamps syringes ranging from 0.5 µl to 60 ml for a single syringe setup, and 0.5 µl to 10 ml for dual syringe configurations, ensuring reliable and consistent performance across a wide variety of syringe sizes.
