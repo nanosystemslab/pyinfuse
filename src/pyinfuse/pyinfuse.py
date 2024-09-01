@@ -1,9 +1,13 @@
+"""Library for control of Harvard Apparatus Pump 11 Syringe Pumps."""
+
 import argparse
 import logging
 import sys
-from typing import Any, Dict
+from typing import Any
+from typing import Dict
 
 import serial
+
 
 __version__ = "0.0.1"
 
@@ -22,7 +26,14 @@ class Chain(serial.Serial):
     """
 
     def __init__(self, port: str):
-        serial.Serial.__init__(self, port=port, stopbits=serial.STOPBITS_TWO, parity=serial.PARITY_NONE, timeout=2)
+        """Placeholder description of constructor."""
+        serial.Serial.__init__(
+            self,
+            port=port,
+            stopbits=serial.STOPBITS_TWO,
+            parity=serial.PARITY_NONE,
+            timeout=2,
+        )
         logging.info("Chain created on %s", port)
 
 
@@ -38,6 +49,7 @@ class Pump:
     """
 
     def __init__(self, chain: Chain, address: int = 0, name: str = "Pump 11"):
+        """Placeholder description of constructor."""
         self.name = name
         self.serialcon = chain
         self.address = f"{address:02.0f}"
@@ -60,15 +72,21 @@ class Pump:
             self.serialcon.close()
             raise
 
-        logging.info("%s: created at address %s on %s", self.name, self.address, self.serialcon.port)
-        return None
+        logging.info(
+            "%s: created at address %s on %s",
+            self.name,
+            self.address,
+            self.serialcon.port,
+        )
 
     def write(self, command: str) -> None:
+        """Placeholder description of method."""
         msg_write = f"{self.address}{command}\r"
         self.serialcon.write(msg_write.encode("utf-8"))
         return None
 
     def read(self, read_bytes: int = 5) -> str:
+        """Placeholder description of method."""
         response = self.serialcon.read(read_bytes).decode()
 
         if len(response) == 0:
@@ -176,7 +194,6 @@ class Pump:
 
     def settargetvolume(self, targetvolume: str, units: str) -> None:
         """Set the target volume to infuse or withdraw (microlitres)."""
-
         msg = f"tvolume {targetvolume} {units}"
         self.write(msg)
         resp = self.read(50)
@@ -198,6 +215,8 @@ class Pump:
 
 
 class PumpError(Exception):
+    """Placeholder description of class."""
+
     pass
 
 
@@ -206,16 +225,33 @@ class PumpError(Exception):
 
 
 def setup_logging(verbosity: str) -> None:
+    """Placeholder description of function."""
     log_fmt = "%(levelname)s - %(module)s - %(funcName)s @%(lineno)d: %(message)s"
     # addl keys: asctime, module, name
-    logging.basicConfig(filename=None, format=log_fmt, level=logging.getLevelName(verbosity))
+    logging.basicConfig(
+        filename=None, format=log_fmt, level=logging.getLevelName(verbosity)
+    )
     return None
 
 
 def parse_command_line() -> Dict[str, Any]:
+    """Placeholder description of function."""
     parser = argparse.ArgumentParser(description="Analyse sensor data")
-    parser.add_argument("-V", "--version", "--VERSION", action="version", version=f"%(prog)s {__version__}")
-    parser.add_argument("-v", "--verbose", action="count", default=0, dest="verbosity", help="verbose output")
+    parser.add_argument(
+        "-V",
+        "--version",
+        "--VERSION",
+        action="version",
+        version=f"%(prog)s {__version__}",
+    )
+    parser.add_argument(
+        "-v",
+        "--verbose",
+        action="count",
+        default=0,
+        dest="verbosity",
+        help="verbose output",
+    )
     # -h/--help is auto-added
     parser.add_argument(
         "-add",
@@ -279,11 +315,11 @@ def parse_command_line() -> Dict[str, Any]:
     )
     ret = vars(parser.parse_args())
     ret["verbosity"] = max(0, 30 - 10 * ret["verbosity"])
-
     return ret
 
 
 def main() -> str:
+    """Placeholder description of function."""
     cmd_args = parse_command_line()
     setup_logging(cmd_args["verbosity"])
     chain = Chain(cmd_args["address"][0])
