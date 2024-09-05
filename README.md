@@ -41,7 +41,10 @@ For more information visit [Harvard Apparatus](https://www.harvardapparatus.com/
 
 ## Requirements
 
-- TODO
+- Python <4.0, >=3.9
+- Poetry
+- Nox
+- nox-poetry
 
 ## Installation
 
