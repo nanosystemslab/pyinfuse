@@ -16,7 +16,7 @@ report:
         environment-results: true
         unpinned-requirements: true
       cvss-severity: []
-      vulnerabilities
+      vulnerabilities:
         70612:
         reason: Project not impacted by this vulnerability
         expires: '2025-01-01'
