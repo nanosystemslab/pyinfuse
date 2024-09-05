@@ -36,7 +36,7 @@ For researchers seeking a reliable, accurate, and user-friendly infusion solutio
 
 For more information visit [Harvard Apparatus](https://www.harvardapparatus.com/standard-infuse-withdraw-pump-11-elite-programmable-syringe-pumps.html).
 
-- **github repository**: <https://github.com/nanosystemslab/pyinfuse/>
+- **Github repository**: <https://github.com/nanosystemslab/pyinfuse/>
 - **Documentation** <https://nanosystemslab.github.io/pyinfuse/>
 
 ## Requirements
