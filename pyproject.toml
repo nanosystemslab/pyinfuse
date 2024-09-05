@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyinfuse"
-version = "0.0.1"
+version = "0.1.0"
 description = "Pyinfuse"
 authors = ["Nanosystems Lab <fnslab@hawaii.edu>"]
 license = "MIT"
