@@ -17,9 +17,9 @@ Changelog = "https://github.com/nanosystemslab/pyinfuse/releases"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-click = ">=8.0.1"
 pyserial = "^3.5"
 types-pyserial = "^3.5.0.20240826"
+click = "^8.1.7"
 
 [tool.poetry.dev-dependencies]
 Pygments = ">=2.10.0"
