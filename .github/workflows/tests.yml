@@ -101,7 +101,7 @@ jobs:
         with:
           name: coverage-data
           include-hidden-files: true
-          path: ".coverage.*"
+          path: "{{ github.workspace }}/.coverage.*"
 
       - name: Upload documentation
         if: matrix.session == 'docs-build'
