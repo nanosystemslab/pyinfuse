@@ -97,7 +97,7 @@ jobs:
 
       - name: Upload coverage data
         if: always() && matrix.session == 'tests'
-        uses: "actions/upload-artifact@v2.2.0"
+        uses: "actions/upload-artifact@v4"
         with:
           name: coverage-data
           path: ".coverage.*"
@@ -138,13 +138,13 @@ jobs:
           nox --version
 
       - name: Download coverage data
-        uses: actions/download-artifact@v2.0.5
+        uses: actions/download-artifact@v4
         with:
           name: coverage-data
 
       - name: Combine coverage data and display human readable report
         run: |
-          nox --force-color --session=coverage
+          nox --session=coverage
 
       - name: Create coverage report
         run: |
