@@ -173,24 +173,14 @@ def tests(session: Session) -> None:
 @session(python=python_versions[0])
 def coverage(session: Session) -> None:
     """Produce the coverage report."""
-    has_args = session.posargs and len(session._runner.manifest) == 1
-    args = session.posargs if has_args else ["report"]
+    args = session.posargs or ["report"]
 
     session.install("coverage[toml]")
 
-    if not has_args and any(Path().glob(".coverage.*")):
+    if not session.posargs and any(Path().glob(".coverage.*")):
         session.run("coverage", "combine")
 
     session.run("coverage", *args)
-
-    # args = session.posargs or ["report"]
-
-    # session.install("coverage[toml]")
-
-    # if not session.posargs and any(Path().glob(".coverage.*")):
-    #     session.run("coverage", "combine")
-
-    # session.run("coverage", *args)
 
 
 @session(python=python_versions[0])
