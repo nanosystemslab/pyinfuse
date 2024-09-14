@@ -145,7 +145,7 @@ jobs:
       - name: Download coverage data
         uses: actions/download-artifact@v4
         with:
-          name: docs
+          name: coverage-data
 
       - name: Combine coverage data and display human readable report
         run: |
